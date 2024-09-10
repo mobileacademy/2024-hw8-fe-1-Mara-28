@@ -1,9 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset = "UTF-8">
     <title>Minesweeper</title>
-    
+    <link rel="stylesheet" href = "MineStyle.css"></link>
+
   </head>
   <body>
-    <h1>Hello world</h1>
+    <h1 style = "color: #DA70D6">&#128163; Bum bum game &#128163;</h1>
+    <select id = "difficulty">
+      <option value = "easy">Easy</option>
+      <option value = "medium">Medium</option>
+      <option value = "King version">You're the king of bumbum game! &#128521;</option>
+    </select>
+
+    <div class="row">
+      <br>
+      <p>Select probabilities:</p>
+      <div class="col">
+        <label for="prob" style="color: #6A5ACD">Bomb probability</label>
+        <input
+          placeholder="Range 1 to max probability"
+          value="3"
+          id="bombProbabilityInput"
+        />
+      </div>
+      <div class="col">
+        <label for="prob" style="color: #6A5ACD">Max probability</label>
+        <input placeholder="Min: 1" value="15" id="maxProbabilityInput" />
+      </div>
+    </div>
+    <div id = "board"></div>
+    <button id = "resetButtom"><i class = "redo"></i>Restart</button>
+    
   </body>
+  <script src="./solution-template.js"></script>
 </html>
